@@ -109,6 +109,7 @@ public:
         consensus.mweb_input_metadata_grandfather_blockhash = uint256S("0xd1695b5d115f86927a9763768218118ba88b315844e1a0681fa08f6f008be622");
         // One expected week (4,032 blocks) after height 3,150,408.
         consensus.mweb_pegout_feature_activation_height = 3'154'440;
+        consensus.mweb_extradata_feature_activation_height = 3'172'640;
         consensus.frozen_mweb_output_ids = GetFrozenMWEBOutputIDs();
 
         /**
@@ -138,7 +139,7 @@ public:
         vSeeds.emplace_back("seed-a.litecoin.loshan.co.uk");
         vSeeds.emplace_back("dnsseed.thrasher.io");
         vSeeds.emplace_back("dnsseed.litecointools.com");
-        vSeeds.emplace_back("dnsseed.litecoinpool.org");
+        vSeeds.emplace_back("dnsseed.ltcpool.org");
         vSeeds.emplace_back("dnsseed.koin-project.com");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,48);
@@ -231,6 +232,7 @@ public:
         consensus.defaultAssumeValid = uint256S("0x4a280c0e150e3b74ebe19618e6394548c8a39d5549fd9941b9c431c73822fbd5"); // 1737876
 
         consensus.mweb_pegout_feature_activation_height = 0;
+        consensus.mweb_extradata_feature_activation_height = 0;
         pchMessageStart[0] = 0xfd;
         pchMessageStart[1] = 0xd2;
         pchMessageStart[2] = 0xc8;
@@ -328,6 +330,7 @@ public:
         consensus.nMinimumChainWork = uint256{};
         consensus.defaultAssumeValid = uint256{};
         consensus.mweb_pegout_feature_activation_height = 0;
+        consensus.mweb_extradata_feature_activation_height = 0;
         consensus.frozen_mweb_output_ids = GetFrozenMWEBOutputIDs();
         pchMessageStart[0] = 0xfa;
         pchMessageStart[1] = 0xbf;
